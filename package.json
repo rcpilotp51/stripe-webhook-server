@@ -1,37 +1,90 @@
 {
-  "name": "stripe-webhook-server",
-  "version": "0.2.0",
-  "main": "routes/index.js",
-  "scripts": {
-    "start": "DEBUG=webhooks,webhook-server,webhook-handler,webhook-email node server.js"
+  "_args": [
+    [
+      "stripe-webhook-server",
+      "/Users/keithbrown/Documents/Development/server/seedbook-kb"
+    ]
+  ],
+  "_from": "stripe-webhook-server@latest",
+  "_id": "stripe-webhook-server@0.1.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/stripe-webhook-server",
+  "_npmUser": {
+    "email": "jeffhparish@gmail.com",
+    "name": "ruffrey"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ruffrey/stripe-webhook-server"
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {
+    "buffer-crc32": "^0.2.5",
+    "connect": "^3.4.1",
+    "debug": "^2.2.0",
+    "mimelib": "^0.2.19",
+    "mkdirp": "^0.5.1",
+    "simplesmtp": "^0.3.35"
   },
+  "_requested": {
+    "name": "stripe-webhook-server",
+    "raw": "stripe-webhook-server",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/stripe-webhook-server/-/stripe-webhook-server-0.1.3.tgz",
+  "_shasum": "a9e53a7ce3305c14dad9980d9c6926e494c7e206",
+  "_shrinkwrap": null,
+  "_spec": "stripe-webhook-server",
+  "_where": "/Users/keithbrown/Documents/Development/server/seedbook-kb",
   "dependencies": {
-    "date-utils": "1.2.x",
-    "debug": "^2.0.0",
-    "express": "3.1.0",
-    "handlebars": "1.0.12",
-    "nodemailer": "0.4.4",
-    "stripe": "~1.3.0"
+    "colors": "^1.1.2",
+    "date-utils": "^1.2.21",
+    "express": "^4.11.2",
+    "handlebars": "^4.0.5",
+    "nodemailer": "^1.11.0",
+    "stripe": "^4.0.0"
+  },
+  "description": "This is a scaffold for responding to [Stripe](https://stripe.com/docs/webhooks).",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a9e53a7ce3305c14dad9980d9c6926e494c7e206",
+    "tarball": "https://registry.npmjs.org/stripe-webhook-server/-/stripe-webhook-server-0.1.3.tgz"
   },
   "engines": {
-    "node": "0.8.24"
+    "node": "~4.3.0"
   },
-  "description": "This is a standalone scaffold or middleware for responding to [Stripe webhooks](https://stripe.com/docs/webhooks).",
-  "bugs": {
-    "url": "https://github.com/ruffrey/stripe-webhook-server/issues"
-  },
-  "homepage": "https://github.com/ruffrey/stripe-webhook-server",
-  "devDependencies": {},
-  "keywords": [
-    "stripe",
-    "webhook",
-    "scaffold",
-    "payments"
+  "maintainers": [
+    {
+      "email": "jeffhparish@gmail.com",
+      "name": "ruffrey"
+    }
   ],
-  "author": "Jeff Parrish <jeffhparrish@gmail.com>",
-  "license": "MIT"
+  "name": "stripe-webhook-server",
+  "optionalDependencies": {},
+  "readme": "# What this thing does\n\nThis is a scaffold for responding to [Stripe](https://stripe.com/docs/webhooks). \n\nBy default it'll send some emails to customers for you. But you can reprogram it to do whatever, plotting world domination or something else.\n\nThere is no user interface in stripe-webhook-server - use [Stripe's website](https://stripe.com).\n\n# Nickname\n\nI get tired of typing `stripe-webhook-server` so it'll be referred to as `SWS`. It is not affiliated with the Swiss, Swiss cheese, Swiss army knives, etc. but pronouncing it 'swiss' is cool.\n\n# Assumptions\n\n- You have a [Stripe](https://stripe.com) account.\n- You're running [Node.js](http://nodejs.org) >= 8.x.x\n- You are storing the customer's email address in the email field. Otherwise the emails won't work!\n- You are going to use one of Nodemailer's built in services.\n- You like to wear silly hats (optional).\n\n# Usage\n\n`git clone` this repo.\n\nEdit `public-config.js` to suit your needs and rename it to `config.js`.\n\n`lib/webhooks.js` is a list of the webhooks you support. If you don't want to do anything with a webhook, leave the function empty or just delete the entry completely. SWS\n\nYou might want to take a look if you prefer not to send out the default  at Maybe even edit `lib/webhook-server.js`.\n\nYou are good to go for local dev. See the `/scripts/` folder for setting this thing up on a VPS.\n\n# Modules in use\n\nFor your knowledge it's using these\n\n- [Express 3](http://expressjs.com)\n- [Nodemailer](https://github.com/andris9/Nodemailer) for sending email\n- [Handlebars](http://handlebarsjs.com) for compiling templates\n\n# Bugs\n\nPlease branch, fix, and submit pull request. \n\n# Legal\n\nCopyright 2013 Jeff Parrish\n\nNo warranty expressed or implied.\n\nMIT License\n\n**NOT** officially affiliated with Stripe.\n\n",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.1.3",
+  "warnings": [
+    {
+      "code": "ENOTSUP",
+      "pkgid": "stripe-webhook-server@0.1.3",
+      "required": {
+        "node": ">=6.0.0"
+      }
+    },
+    {
+      "code": "ENOTSUP",
+      "pkgid": "stripe-webhook-server@0.1.3",
+      "required": {
+        "node": ">=6.0.0"
+      }
+    }
+  ]
 }
