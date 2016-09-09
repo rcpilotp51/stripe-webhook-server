@@ -20,6 +20,11 @@
   "engines": {
     "node": "~4.3.0"
   },
+  "files": [
+    "README.md",
+    "index.js",
+    "lib/"
+  ],
   "description": "This is a standalone scaffold or middleware for responding to [Stripe webhooks](https://stripe.com/docs/webhooks).",
   "bugs": {
     "url": "https://github.com/ruffrey/stripe-webhook-server/issues"
